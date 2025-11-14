@@ -196,7 +196,7 @@ export default function Navbar() {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full shadow-sm bg-white dark:bg-gray-900 dark:text-gray-200 z-50 border-b border-gray-200 dark:border-gray-700 transition-colors">
+    <header className="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 dark:text-gray-200 z-50 border-b border-gray-200 dark:border-gray-700 transition-colors">
       <nav className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
         {/* Logo */}
         <h1
