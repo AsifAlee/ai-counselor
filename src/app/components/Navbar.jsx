@@ -20,7 +20,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full  shadow-sm">
-      <nav className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <nav className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
         {/* Logo */}
         <h1
           className="text-2xl font-bold text-blue-600 cursor-pointer"
@@ -30,7 +30,10 @@ export default function Navbar() {
         </h1>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-8 font-medium">
+        <ul
+          className="hidden md:flex space-x-8 font-medium text-sm"
+          style={{ fontSize: "0.8rem" }}
+        >
           <li>
             <button
               onClick={() => handleScroll("home")}
@@ -78,9 +81,9 @@ export default function Navbar() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition"
+            className="bg-blue-600 text-white text-sm px-5 py-2 rounded-full hover:bg-blue-700 transition"
           >
-            Start Chat
+            Book an intro
           </motion.button>
         </a>
 
