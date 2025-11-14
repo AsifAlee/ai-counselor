@@ -8,6 +8,7 @@ import DemoSection from "./components/DemoSection";
 import Testimonials from "./components/Testimonial";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import Waitlist from "./components/WaitList";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <DemoSection />
       <Testimonials />
       <CTA />
+      <Waitlist />
       <Footer />
     </div>
   );
