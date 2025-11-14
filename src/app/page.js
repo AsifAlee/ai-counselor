@@ -1,27 +1,29 @@
-"use client";
+import { ThemeProvider } from "@/context/ThemeContext";
 
-import Navbar from "./components/Navbar";
+import DemoSection from "./components/DemoSection";
+import Features from "./components/Feature";
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
-import Features from "./components/Feature";
-import DemoSection from "./components/DemoSection";
+import Navbar from "./components/Navbar";
 import Testimonials from "./components/Testimonial";
-import CTA from "./components/CTA";
-import Footer from "./components/Footer";
 import Waitlist from "./components/WaitList";
 
 export default function Home() {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <HowItWorks />
-      <Features />
-      <DemoSection />
-      <Testimonials />
-      <CTA />
-      <Waitlist />
-      <Footer />
-    </div>
+    <ThemeProvider>
+      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
+        <Navbar />
+        <main className="pt-20">
+          <Hero />
+          <HowItWorks />
+          <Features />
+          <DemoSection />
+          <Testimonials />
+          <Waitlist />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 }
