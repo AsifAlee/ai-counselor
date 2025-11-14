@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ThemeProvider } from "@/context/ThemeContext";
-import DarkModeSwitch from "@/components/DarkModeSwitch";
+import DarkModeSwitch from "../components/DarkModeSwitch";
 
 export default function ChatPage() {
   const [messages, setMessages] = useState([
