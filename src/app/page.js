@@ -10,6 +10,8 @@ import Testimonials from "./components/Testimonial";
 import Waitlist from "./components/WaitList";
 import FeaturesSynced from "./components/FeatureSynced";
 import CareerPitch from "./components/CareerPitch";
+import Impact from "./components/Impact";
+import Multilingual from "./components/Multilingual";
 
 export default function Home() {
   return (
@@ -20,10 +22,13 @@ export default function Home() {
           <Hero />
           <HowItWorks />
           <Features />
-          <FeaturesSynced />
+          {/* <FeaturesSynced /> */}
           {/* <DemoSection /> */}
           <Testimonials />
+
           <CareerPitch />
+          <Impact />
+          <Multilingual />
           <Waitlist />
         </main>
         <Footer />

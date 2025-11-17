@@ -103,7 +103,7 @@ export default function Navbar() {
         {/* Right Section */}
         <div className="hidden md:flex items-center gap-4">
           {/* Book Intro Button */}
-          <a href="/chat">
+          <a href="/signup">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}

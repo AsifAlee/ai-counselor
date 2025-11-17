@@ -59,10 +59,6 @@ export default function Testimonials() {
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.6 }}
               >
-                <blockquote className="text-gray-800 dark:text-gray-100 text-lg leading-relaxed max-w-xl italic">
-                  “{testimonials[index].quote}”
-                </blockquote>
-
                 <div className="mt-6 flex items-center justify-center gap-3">
                   <img
                     src={testimonials[index].image}
@@ -79,6 +75,9 @@ export default function Testimonials() {
                     </p>
                   </div>
                 </div>
+                <blockquote className="text-gray-800 dark:text-gray-100 text-lg leading-relaxed max-w-xl italic">
+                  “{testimonials[index].quote}”
+                </blockquote>
               </motion.div>
             </AnimatePresence>
           </div>
