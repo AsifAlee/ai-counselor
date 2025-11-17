@@ -139,7 +139,7 @@ export default function HowItWorks() {
   return (
     <section
       id="how"
-      className="py-20 bg-white dark:bg-gray-900 transition-colors"
+      className="py-20 bg-white dark:bg-gray-900 transition-colors overflow-hidden"
       ref={containerRef}
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -168,7 +168,7 @@ export default function HowItWorks() {
           </div>
 
           {/* HORIZONTAL PROGRESS + CONNECTORS */}
-          <div className="relative">
+          <div className="relative overflow-hidden">
             <svg
               className="absolute inset-0 pointer-events-none"
               style={{ overflow: "visible", zIndex: 5 }}
@@ -200,7 +200,7 @@ export default function HowItWorks() {
             </svg>
 
             {/* PROGRESS BACKGROUND */}
-            <div className="absolute top-6 left-0 right-0 h-[3px] bg-gray-300 dark:bg-gray-700 rounded-full" />
+            <div className="absolute top-6 left-0 right-0 h-[3px] bg-gray-300 dark:bg-gray-700 rounded-full progress-bg" />
 
             {/* PROGRESS FILL */}
             <motion.div
@@ -211,7 +211,7 @@ export default function HowItWorks() {
             />
 
             {/* STEPS */}
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mt-12">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mt-1">
               {steps.map((s, i) => {
                 const isActive = highlighted === i;
                 const isComplete = highlighted > i;
@@ -222,7 +222,7 @@ export default function HowItWorks() {
                     className="flex flex-col items-center"
                     data-step-index={i}
                   >
-                    {/* DOT */}
+                    {/* DOT   */}
                     <motion.div
                       ref={addDotRef}
                       onClick={() => openPanelFor(i)}

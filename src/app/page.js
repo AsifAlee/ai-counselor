@@ -8,6 +8,8 @@ import HowItWorks from "./components/HowItWorks";
 import Navbar from "./components/Navbar";
 import Testimonials from "./components/Testimonial";
 import Waitlist from "./components/WaitList";
+import FeaturesSynced from "./components/FeatureSynced";
+import CareerPitch from "./components/CareerPitch";
 
 export default function Home() {
   return (
@@ -18,8 +20,10 @@ export default function Home() {
           <Hero />
           <HowItWorks />
           <Features />
-          <DemoSection />
+          <FeaturesSynced />
+          {/* <DemoSection /> */}
           <Testimonials />
+          <CareerPitch />
           <Waitlist />
         </main>
         <Footer />
