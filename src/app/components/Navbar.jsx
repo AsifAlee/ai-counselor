@@ -23,12 +23,18 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 dark:text-gray-200 z-50 border-b border-gray-200 dark:border-gray-700 transition-colors">
       <nav className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
         {/* Logo */}
-        <h1
+        {/* <h1
           className="text-2xl font-bold text-blue-600 dark:text-blue-400 cursor-pointer"
           onClick={() => handleScroll("home")}
         >
           AI Counselor
-        </h1>
+        </h1> */}
+        <img
+          src="./logo.svg"
+          alt="Pathvius logo"
+          className="w-36 cursor-pointer dark:invert-[0.9]"
+          onClick={() => handleScroll("home")}
+        />
 
         {/* Desktop Menu */}
         <ul

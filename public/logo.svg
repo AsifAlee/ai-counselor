@@ -1,0 +1,16 @@
+<svg width="320" height="80" viewBox="0 0 320 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradP" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3A80F8"/>
+      <stop offset="100%" stop-color="#3AF7D1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo Icon -->
+  <path d="M22 15C22 10 26 6 31 6H55C66 6 75 15 75 26C75 37 66 46 55 46H40V65C40 70 35 74 30 74C25 74 22 70 22 65V15Z" fill="url(#gradP)" />
+
+  <!-- Text: Pathvius -->
+  <text x="95" y="52" font-family="Inter, sans-serif" font-size="42" font-weight="600" fill="#111">
+    Pathvius
+  </text>
+</svg>
