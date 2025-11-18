@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import "../styles/testimonials.css";
 
 export default function Testimonials() {
   const testimonials = [
@@ -44,7 +45,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-20 bg-white dark:bg-gray-900 transition-colors"
+      className="py-20 bg-white dark:bg-gray-900 transition-colors testimonials"
     >
       <div className="max-w-4xl mx-auto px-6 text-center">
         {/* Carousel Wrapper */}
@@ -59,21 +60,21 @@ export default function Testimonials() {
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="mt-6 flex items-center justify-center gap-3">
+                <div className="mt-6 flex items-center justify-center gap-3 testimonial-avatar">
                   <img
                     src={testimonials[index].image}
                     alt={testimonials[index].name}
                     className="w-12 h-12 rounded-full object-cover"
                   />
 
-                  <div className="text-left">
+                  {/* <div className="text-left">
                     <p className="font-semibold text-gray-900 dark:text-gray-100">
                       {testimonials[index].name}
                     </p>
                     <p className="text-xs text-gray-600 dark:text-gray-300">
                       {testimonials[index].title}
                     </p>
-                  </div>
+                  </div> */}
                 </div>
                 <blockquote className="text-gray-800 dark:text-gray-100 text-lg leading-relaxed max-w-xl italic">
                   “{testimonials[index].quote}”
@@ -99,7 +100,7 @@ export default function Testimonials() {
           </button>
 
           {/* Dots */}
-          <div className="flex justify-center gap-2 mt-6">
+          <div className="flex justify-center gap-2 mt-20">
             {testimonials.map((_, i) => (
               <button
                 key={i}

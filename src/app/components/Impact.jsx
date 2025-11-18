@@ -90,7 +90,7 @@ export default function Impact() {
             >
               <div className="flex flex-col gap-10">
                 <div className="grid grid-cols-2 w-full h-full">
-                  <div className="flex flex-col gap-3">
+                  <div className="flex flex-col gap-2">
                     <p className="mt-3  text-left text-lg font-semibold text-gray-900 dark:text-gray-100">
                       {s.label}
                     </p>
