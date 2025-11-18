@@ -1,0 +1,9 @@
+.impact {
+  background-color: #f5f0ec;
+}
+.linear-gradient-border {
+  background-image: linear-gradient(90deg, #c6e2ad, #b0dadf 47%, #d8c3e1);
+  height: 0.19rem;
+  /* position: absolute; */
+  inset: auto 0% 0%;
+}
