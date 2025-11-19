@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import "../styles/career-pitch.css";
 
 export default function CareerPitch() {
   const steps = [
@@ -12,11 +13,9 @@ export default function CareerPitch() {
   ];
 
   return (
-    <section className="py-20 bg-white dark:bg-gray-900 transition-colors">
+    <section className="py-20 bg-white dark:bg-gray-900 transition-colors ">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col gap-12">
-          {/* Heading */}
-          {/* Heading */}
           <div className="max-w-2xl mx-auto text-center">
             <motion.h2
               initial={{ opacity: 0, y: 8 }}
@@ -51,14 +50,10 @@ export default function CareerPitch() {
               ambitions into real-world success.
             </motion.p>
           </div>
-
-          {/* ⭐ HORIZONTAL PROGRESS BAR WITH NUMBERS ⭐ */}
-          {/* ⭐ HORIZONTAL PROGRESS WITH ICONS ⭐ */}
-          {/* ⭐ BIG & WIDE HORIZONTAL PROGRESS BAR ⭐ */}
         </div>
         <div className="relative max-w-5xl mx-auto mt-14">
           {/* Background line */}
-          <div className="absolute top-[36px] left-0 right-0 h-[4px] bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+          <div className=" dotted-border"></div>
 
           {/* Steps */}
           <div className="grid grid-cols-5 text-center relative">

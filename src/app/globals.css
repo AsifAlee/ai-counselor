@@ -4,12 +4,6 @@
 body {
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -19,6 +13,12 @@ a {
   font-family: "Sana Sans";
   src: url("../../public/fonts/sana/SanaSans-Variable.woff2")
     format("woff2-variations");
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Sana Sans", sans-serif;
 }
 
 /* @font-face {

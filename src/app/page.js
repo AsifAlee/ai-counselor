@@ -12,6 +12,8 @@ import FeaturesSynced from "./components/FeatureSynced";
 import CareerPitch from "./components/CareerPitch";
 import Impact from "./components/Impact";
 import Multilingual from "./components/Multilingual";
+import ScrollOnSlide from "./components/ScrollOnSlide";
+import Marquee from "./components/Marquee";
 
 export default function Home() {
   return (
@@ -20,15 +22,16 @@ export default function Home() {
         <Navbar />
         <main className="pt-20">
           <Hero />
+          {/* <ScrollOnSlide /> */}
           <HowItWorks />
           <Features />
           {/* <FeaturesSynced /> */}
           {/* <DemoSection /> */}
           <Testimonials />
-
           <CareerPitch />
           <Impact />
           <Multilingual />
+          <Marquee />x
           <Waitlist />
         </main>
         <Footer />
