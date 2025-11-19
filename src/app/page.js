@@ -20,7 +20,7 @@ export default function Home() {
     <ThemeProvider>
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
         <Navbar />
-        <main className="pt-20">
+        <main className="pt-10">
           <Hero />
           {/* <ScrollOnSlide /> */}
           <HowItWorks />

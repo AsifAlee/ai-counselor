@@ -88,13 +88,13 @@ export default function Impact() {
               transition={{ delay: i * 0.1, duration: 0.6 }}
               className="p-6  grid grid-cols-1  dark:bg-gray-900 rounded-2xl  dark:shadow-lg"
             >
-              <div className="flex flex-col gap-10">
+              <div className="flex flex-col gap-5">
                 <div className="grid grid-cols-2 w-full h-full">
-                  <div className="flex flex-col gap-2">
-                    <p className="mt-3  text-left text-lg font-semibold text-gray-900 dark:text-gray-100">
+                  <div className="flex flex-col ">
+                    <p className="text-left text-lg font-semibold text-gray-900 dark:text-gray-100">
                       {s.label}
                     </p>
-                    <p className="mt-2 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
                       {s.desc}
                     </p>
                   </div>
