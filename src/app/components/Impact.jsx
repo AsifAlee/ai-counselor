@@ -5,12 +5,12 @@ import "../styles/impact.css";
 export default function Impact() {
   const stats = [
     {
-      value: "12,500+",
+      value: "5M+",
       label: "Students Growing",
       desc: "Students benefiting from personalized career guidance.",
     },
     {
-      value: "48+",
+      value: "48M+",
       label: "Institutions Onboarded",
       desc: "Educational institutes using Pathvius for AI-driven counseling.",
     },
@@ -98,8 +98,8 @@ export default function Impact() {
                       {s.desc}
                     </p>
                   </div>
-                  <div className="flex items-center  justify-center">
-                    <h3 className="text-4xl font-bold text-blue-600 dark:text-blue-400">
+                  <div className="flex items-center  justify-center ">
+                    <h3 className="text-4xl font-bold text-black-600 dark:text-blue-400 value">
                       {s.value}
                     </h3>
                   </div>
