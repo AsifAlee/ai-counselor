@@ -31,7 +31,7 @@ export default function Home() {
           <CareerPitch />
           <Impact />
           <Multilingual />
-          <Marquee />x
+          <Marquee />
           <Waitlist />
         </main>
         <Footer />

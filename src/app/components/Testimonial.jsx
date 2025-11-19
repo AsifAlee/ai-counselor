@@ -38,8 +38,8 @@ export default function Testimonials() {
 
   // Auto-slide every 6 seconds
   useEffect(() => {
-    // const timer = setInterval(() => next(), 6000);
-    // return () => clearInterval(timer);
+    const timer = setInterval(() => next(), 6000);
+    return () => clearInterval(timer);
   }, []);
 
   return (

@@ -21,7 +21,7 @@ export default function CareerPitch() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight"
+              className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight italic"
             >
               AI Career Counseling —{" "}
               <span className="text-blue-600 dark:text-blue-400">
