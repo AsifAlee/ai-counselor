@@ -78,11 +78,14 @@ export default function CareerPitch() {
           flex items-center justify-center 
           rounded-full 
           text-3xl
-          bg-gray-100 dark:bg-gray-800 
+          
           text-gray-900 dark:text-gray-100 
           shadow-md 
           relative z-10
         "
+                  style={{
+                    backgroundColor: "#cdfe00",
+                  }}
                 >
                   {step.icon}
                 </div>
