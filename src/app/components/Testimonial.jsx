@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, ArrowLeft } from "lucide-react";
 import "../styles/testimonials.css";
 
 export default function Testimonials() {
@@ -38,8 +38,8 @@ export default function Testimonials() {
 
   // Auto-slide every 6 seconds
   useEffect(() => {
-    const timer = setInterval(() => next(), 6000);
-    return () => clearInterval(timer);
+    // const timer = setInterval(() => next(), 6000);
+    // return () => clearInterval(timer);
   }, []);
 
   return (
@@ -50,57 +50,53 @@ export default function Testimonials() {
       <div className="max-w-4xl mx-auto px-6 text-center">
         {/* Carousel Wrapper */}
         <div className="relative overflow-hidden">
-          <div className="relative h-[300px] sm:h-[260px]">
+          <div className="relative h-[515px] sm:h-[515px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
-                className="absolute inset-0 flex flex-col items-center justify-center p-8"
+                className="absolute inset-0 flex flex-col items-center justify-center p-8 gap-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="mt-6 flex items-center justify-center gap-3 testimonial-avatar">
+                <div className="mt-6 flex items-center justify-center gap-8 testimonial-avatar">
                   <img
                     src={testimonials[index].image}
                     alt={testimonials[index].name}
-                    className="w-12 h-12 rounded-full object-cover"
+                    className="w-12 h-12  object-cover"
                   />
-
-                  {/* <div className="text-left">
-                    <p className="font-semibold text-gray-900 dark:text-gray-100">
-                      {testimonials[index].name}
-                    </p>
-                    <p className="text-xs text-gray-600 dark:text-gray-300">
-                      {testimonials[index].title}
-                    </p>
-                  </div> */}
                 </div>
                 <blockquote className="text-gray-800 dark:text-gray-100 text-lg leading-relaxed max-w-xl italic">
                   “{testimonials[index].quote}”
                 </blockquote>
+                <p className="text-xs text-gray-600 dark:text-gray-300">
+                  {testimonials[index].title}
+                </p>
+                <div className="flex gap-2">
+                  <button
+                    onClick={prev}
+                    className="bg-white dark:bg-gray-800 p-2 rounded-full shadow hover:scale-105 transition"
+                  >
+                    <ArrowLeft className="text-gray-900 dark:text-gray-100" />
+                  </button>
+
+                  {/* Right Arrow */}
+                  <button
+                    onClick={next}
+                    className="bg-white dark:bg-gray-800 p-2 rounded-full shadow hover:scale-105 transition"
+                  >
+                    <ArrowRight className="text-gray-900 dark:text-gray-100" />
+                  </button>
+                </div>
               </motion.div>
             </AnimatePresence>
           </div>
 
           {/* Left Arrow */}
-          <button
-            onClick={prev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 p-2 rounded-full shadow hover:scale-105 transition"
-          >
-            <ChevronLeft className="text-gray-900 dark:text-gray-100" />
-          </button>
-
-          {/* Right Arrow */}
-          <button
-            onClick={next}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-800 p-2 rounded-full shadow hover:scale-105 transition"
-          >
-            <ChevronRight className="text-gray-900 dark:text-gray-100" />
-          </button>
 
           {/* Dots */}
-          <div className="flex justify-center gap-2 mt-20">
+          {/* <div className="flex justify-center gap-2 mt-20">
             {testimonials.map((_, i) => (
               <button
                 key={i}
@@ -112,7 +108,7 @@ export default function Testimonials() {
                 }`}
               />
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
