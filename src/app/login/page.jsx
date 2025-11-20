@@ -1,67 +1,224 @@
+// "use client";
+
+// import { motion } from "framer-motion";
+// import { useState } from "react";
+
+// export default function Signup() {
+//   const [form, setForm] = useState({ name: "", email: "", password: "" });
+
+//   return (
+//     <section className="h-screen grid grid-cols-2  overflow-hidden">
+//       {/* LEFT COLUMN — FORM */}
+//       <div className="flex items-center justify-center px-8 py-12 bg-white dark:bg-gray-900 border">
+//         <motion.div
+//           initial={{ opacity: 0, y: 10 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.6 }}
+//           className="w-full max-w-sm"
+//         >
+//           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+//             Create an Account
+//           </h2>
+
+//           {/* NAME */}
+//           <div className="mb-4">
+//             <label className="block text-sm mb-1 text-gray-700 dark:text-gray-300">
+//               Full Name
+//             </label>
+//             <input
+//               type="text"
+//               className="w-full px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+//             />
+//           </div>
+
+//           {/* EMAIL */}
+//           <div className="mb-4">
+//             <label className="block text-sm mb-1 text-gray-700 dark:text-gray-300">
+//               Email Address
+//             </label>
+//             <input
+//               type="email"
+//               className="w-full px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+//             />
+//           </div>
+
+//           {/* PASSWORD */}
+//           <div className="mb-6">
+//             <label className="block text-sm mb-1 text-gray-700 dark:text-gray-300">
+//               Password
+//             </label>
+//             <input
+//               type="password"
+//               className="w-full px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+//             />
+//           </div>
+
+//           {/* BUTTON */}
+//           <button className="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold">
+//             Sign Up
+//           </button>
+
+//           <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
+//             Already have an account?{" "}
+//             <a
+//               href="/login"
+//               className="text-blue-600 dark:text-blue-400 underline"
+//             >
+//               Log In
+//             </a>
+//           </p>
+//         </motion.div>
+//       </div>
+
+//       {/* RIGHT COLUMN — IMAGE */}
+//       <div className="hidden lg:block overflow-hidden h-full py-20 px-20 border">
+//         <img
+//           src="/loginpage.jpg"
+//           alt="Signup Illustration"
+//           className="w-full h-full object-cover"
+//         />
+//       </div>
+//     </section>
+//   );
+// }
+
 "use client";
 
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 export default function Login() {
+  const [form, setForm] = useState({ name: "", email: "", password: "" });
+
   return (
-    <section className="h-screen grid grid-cols-1 lg:grid-cols-3 overflow-hidden">
-      {/* LEFT COLUMN — LOGIN FORM */}
-      <div className="col-span-1 flex items-center justify-center px-8 py-12 bg-white dark:bg-gray-900">
+    <section className="h-screen grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
+      {/* LEFT COLUMN — FORM */}
+      <div className="flex items-center justify-center px-8 py-12 bg-white dark:bg-gray-900 border">
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="w-full max-w-sm"
+          className="w-full max-w-md"
         >
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-            Welcome Back
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-10">
+            Create an Account
           </h2>
 
-          {/* EMAIL */}
-          <div className="mb-4">
-            <label className="block text-sm mb-1 text-gray-700 dark:text-gray-300">
-              Email Address
+          {/* FULL NAME */}
+          <div className="relative mb-6">
+            <input
+              type="text"
+              id="fullname"
+              className="peer w-full border-b border-gray-400 dark:border-gray-600 bg-transparent py-2 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-blue-600 dark:focus:border-blue-400"
+              placeholder=" "
+            />
+            <label
+              htmlFor="fullname"
+              className="absolute left-0 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 transition-all 
+              peer-focus:top-0 peer-focus:text-xs peer-focus:text-blue-600 dark:peer-focus:text-blue-400 
+              peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base pointer-events-none"
+            >
+              Full Name
             </label>
+          </div>
+
+          {/* EMAIL */}
+          <div className="relative mb-6">
             <input
               type="email"
-              className="w-full px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              id="email"
+              className="peer w-full border-b border-gray-400 dark:border-gray-600 bg-transparent py-2 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-blue-600 dark:focus:border-blue-400"
+              placeholder=" "
             />
+            <label
+              htmlFor="email"
+              className="absolute left-0 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 transition-all 
+              peer-focus:top-0 peer-focus:text-xs peer-focus:text-blue-600 dark:peer-focus:text-blue-400 
+              peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base pointer-events-none"
+            >
+              Email Address
+            </label>
           </div>
 
           {/* PASSWORD */}
-          <div className="mb-6">
-            <label className="block text-sm mb-1 text-gray-700 dark:text-gray-300">
-              Password
-            </label>
+          <div className="relative mb-8">
             <input
               type="password"
-              className="w-full px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100"
+              id="password"
+              className="peer w-full border-b border-gray-400 dark:border-gray-600 bg-transparent py-2 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-blue-600 dark:focus:border-blue-400"
+              placeholder=" "
             />
+            <label
+              htmlFor="password"
+              className="absolute left-0 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 transition-all 
+              peer-focus:top-0 peer-focus:text-xs peer-focus:text-blue-600 dark:peer-focus:text-blue-400 
+              peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base pointer-events-none"
+            >
+              Password
+            </label>
           </div>
 
           {/* BUTTON */}
           <button className="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold">
-            Log In
+            Sign Up
           </button>
 
           <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-            Don't have an account?{" "}
+            Already have an account?{" "}
             <a
-              href="/signup"
+              href="/login"
               className="text-blue-600 dark:text-blue-400 underline"
             >
-              Create Account
+              Log In
             </a>
           </p>
+
+          <div className="flex items-center my-6">
+            <div className="flex-1 border-t border-gray-300 dark:border-gray-700"></div>
+            <span className="px-4 text-gray-500 dark:text-gray-400 text-sm">
+              or continue with
+            </span>
+            <div className="flex-1 border-t border-gray-300 dark:border-gray-700"></div>
+          </div>
+          <div className="space-y-3">
+            {/* Google */}
+            <button className="w-full py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg flex items-center justify-center gap-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+              <img src="/icons/google.svg" alt="Google" className="w-5 h-5" />
+              <span className="text-gray-700 dark:text-gray-200">
+                Sign up with Google
+              </span>
+            </button>
+
+            {/* Apple */}
+            <button className="w-full py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg flex items-center justify-center gap-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+              <img src="/icons/apple.svg" alt="Apple" className="w-5 h-5" />
+              <span className="text-gray-700 dark:text-gray-200">
+                Sign up with Apple
+              </span>
+            </button>
+
+            {/* Microsoft (Windows) */}
+            <button className="w-full py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg flex items-center justify-center gap-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+              <img
+                src="/icons/windows.svg"
+                alt="Microsoft"
+                className="w-5 h-5"
+              />
+              <span className="text-gray-700 dark:text-gray-200">
+                Sign up with Microsoft
+              </span>
+            </button>
+          </div>
         </motion.div>
       </div>
 
       {/* RIGHT COLUMN — IMAGE */}
-      <div className="col-span-2 hidden lg:block overflow-hidden h-full py-20 px-20">
+      <div className="hidden lg:block overflow-hidden h-full p-20">
         <img
-          src="/login.png"
-          alt="Login Illustration"
+          src="/loginpage.jpg"
+          alt="Signup Illustration"
           className="w-full h-full object-cover"
+          style={{ borderRadius: "4rem" }}
         />
       </div>
     </section>
