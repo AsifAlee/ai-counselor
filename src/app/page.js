@@ -24,13 +24,14 @@ export default function Home() {
         <main className="">
           <Hero />
           {/* <ScrollOnSlide /> */}
-          <HowItWorks />
+          {/* <HowItWorks /> */}
+          <WhatItOffers />
           <Features />
           {/* <FeaturesSynced /> */}
           {/* <DemoSection /> */}
           <Testimonials />
           <CareerPitch />
-          <WhatItOffers />
+
           <Impact />
           <Multilingual />
           <Marquee />

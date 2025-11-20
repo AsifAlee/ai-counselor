@@ -14,7 +14,7 @@ export default function WhatItOffers() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 text-center mb-12 w-750 mx-auto"
+          className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 text-center mb-12 w-750 mx-auto w-[70%]"
         >
           Pathvius offers personalised career insights and guidance to help you
           explore your professional journey
@@ -45,7 +45,7 @@ export default function WhatItOffers() {
             transition={{ duration: 0.6 }}
             className="space-y-4"
           >
-            <ul className="text-lg list-disc">
+            <ul className="text-lg list-disc font-sana">
               <li>
                 Career path and role recommendations aligned with your strengths
                 and goals

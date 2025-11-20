@@ -12,21 +12,35 @@ export default function Testimonials() {
         "Pathvius transformed how we think about career counselling – the AI avatar made our students feel one-on-one backed by data. The progress and confidence we saw was remarkable.",
       name: "Aisha Malik",
       title: "Student, Rawalpindi",
-      image: "hero-avatar.jpg",
+      image: "./profile/p1.jpg",
     },
     {
       quote:
         "The personalized roadmap helped me pick the perfect major that aligned with my strengths. I’ve never had this much confidence in my future career path.",
       name: "Bilal Khan",
       title: "Engineering Graduate",
-      image: "hero-avatar.jpg",
+      image: "./profile/p2.jpg",
     },
     {
       quote:
         "This AI counselor helped me understand my skills and career options. The guidance feels like talking to a real expert.",
       name: "Sana Iqbal",
       title: "Undergraduate Student",
-      image: "hero-avatar.jpg",
+      image: "./profile/p3.jpg",
+    },
+    {
+      quote:
+        "This AI counselor helped me understand my skills and career options. The guidance feels like talking to a real expert.",
+      name: "Sana Iqbal",
+      title: "Undergraduate Student",
+      image: "./profile/p4.jpg",
+    },
+    {
+      quote:
+        "This AI counselor helped me understand my skills and career options. The guidance feels like talking to a real expert.",
+      name: "Sana Iqbal",
+      title: "Undergraduate Student",
+      image: "./profile/p5.jpg",
     },
   ];
 
@@ -38,8 +52,8 @@ export default function Testimonials() {
 
   // Auto-slide every 6 seconds
   useEffect(() => {
-    // const timer = setInterval(() => next(), 6000);
-    // return () => clearInterval(timer);
+    const timer = setInterval(() => next(), 6000);
+    return () => clearInterval(timer);
   }, []);
 
   return (
@@ -50,17 +64,17 @@ export default function Testimonials() {
       <div className="max-w-4xl mx-auto px-6 text-center">
         {/* Carousel Wrapper */}
         <div className="relative overflow-hidden">
-          <div className="relative h-[515px] sm:h-[515px]">
+          <div className="relative h-[540px] sm:h-[540px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
-                className="absolute inset-0 flex flex-col items-center justify-center p-8 gap-6"
+                className="absolute inset-0 flex flex-col items-center justify-center p-8 gap-2"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -30 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="mt-6 flex items-center justify-center gap-8 testimonial-avatar">
+                <div className="mt-6 flex items-center justify-center gap-2 testimonial-avatar">
                   <img
                     src={testimonials[index].image}
                     alt={testimonials[index].name}
@@ -81,7 +95,6 @@ export default function Testimonials() {
                     <ArrowLeft className="text-gray-900 dark:text-gray-100" />
                   </button>
 
-                  {/* Right Arrow */}
                   <button
                     onClick={next}
                     className="bg-white dark:bg-gray-800 p-2 rounded-full shadow hover:scale-105 transition"
