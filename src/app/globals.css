@@ -14,13 +14,28 @@ a {
   src: url("../../public/fonts/sana/SanaSans-Variable.woff2")
     format("woff2-variations");
 }
+@font-face {
+  font-family: "SanaSerif";
+  src: url("../../public/fonts/sana/SanaSerifTestligatur-Regular.woff2")
+    format("woff2-variations");
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: "Sana Sans", sans-serif;
 }
-
+.font-sana {
+  font-family: "Sana Sans", sans-serif;
+}
+.font-sana-serif {
+  font-family: "SanaSerif", serif;
+}
+h1,
+h2 {
+  font-family: "SanaSerif", serif;
+}
 /* @font-face {
   font-family: "Sana Sans";
   src: url("../../public/fonts/sana/SanaSerif05-Italic.woff2")

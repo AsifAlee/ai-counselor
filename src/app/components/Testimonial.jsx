@@ -38,8 +38,8 @@ export default function Testimonials() {
 
   // Auto-slide every 6 seconds
   useEffect(() => {
-    const timer = setInterval(() => next(), 6000);
-    return () => clearInterval(timer);
+    // const timer = setInterval(() => next(), 6000);
+    // return () => clearInterval(timer);
   }, []);
 
   return (
@@ -67,10 +67,10 @@ export default function Testimonials() {
                     className="w-12 h-12  object-cover"
                   />
                 </div>
-                <blockquote className="text-gray-800 dark:text-gray-100 text-lg leading-relaxed max-w-xl italic">
+                <h4 className="text-gray-800 dark:text-gray-100 text-lg leading-relaxed max-w-xl  quote-text">
                   “{testimonials[index].quote}”
-                </blockquote>
-                <p className="text-xs text-gray-600 dark:text-gray-300">
+                </h4>
+                <p className="text-xs text-gray-600 dark:text-gray-300 testimonial-title">
                   {testimonials[index].title}
                 </p>
                 <div className="flex gap-2">

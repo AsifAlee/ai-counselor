@@ -6,7 +6,7 @@ import "../styles/hero.css";
 
 export default function Hero() {
   return (
-    <section className=" hero relative overflow-hidden  dark:bg-gray-900 pt-10 pb-20">
+    <section className=" hero relative overflow-hidden  dark:bg-gray-900 pt-40 pb-20">
       {/* Background Gradient */}
 
       <div className="max-w-7xl mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
@@ -17,7 +17,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-4xl md:text-5xl font-bold leading-tight text-gray-900 dark:text-gray-100"
+            className="text-4xl md:text-5xl font-bold leading-tight text-gray-900 dark:text-gray-100 font-sana-serif"
           >
             Shape the Future of Career Coaching
           </motion.h1>
@@ -27,7 +27,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mt-6 text-gray-700 dark:text-gray-300 max-w-lg text-lg"
+            className="mt-6 text-gray-700 dark:text-gray-300 max-w-lg text-lg font-sana-serif"
           >
             Are you looking for a new role, considering a career change, or
             wanting to know yourself better?
@@ -37,7 +37,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mt-6 text-gray-700 dark:text-gray-300 max-w-lg text-lg"
+            className="mt-6 text-gray-700 dark:text-gray-300 max-w-lg text-lg font-sana-serif"
           >
             Discover your potential with Phai, an experimental AI career coach
             from Sapia.ai. We’re seeking your valuable feedback to refine and
@@ -49,7 +49,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9 }}
-            className="mt-8 flex "
+            className="mt-8 flex font-sana-serif "
           >
             <a
               href="/chat"

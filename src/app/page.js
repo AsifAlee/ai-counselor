@@ -14,13 +14,14 @@ import Impact from "./components/Impact";
 import Multilingual from "./components/Multilingual";
 import ScrollOnSlide from "./components/ScrollOnSlide";
 import Marquee from "./components/Marquee";
+import WhatItOffers from "./components/WhatOffers";
 
 export default function Home() {
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
         <Navbar />
-        <main className="pt-10">
+        <main className="">
           <Hero />
           {/* <ScrollOnSlide /> */}
           <HowItWorks />
@@ -29,6 +30,7 @@ export default function Home() {
           {/* <DemoSection /> */}
           <Testimonials />
           <CareerPitch />
+          <WhatItOffers />
           <Impact />
           <Multilingual />
           <Marquee />

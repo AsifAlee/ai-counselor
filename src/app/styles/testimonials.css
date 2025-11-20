@@ -8,6 +8,22 @@
   justify-content: flex-start;
   width: 13rem;
 }
+.quote-text {
+  font-family: "SanaSerif", serif;
+  font-size: 1.5rem;
+  line-height: 115%;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.testimonial-title {
+  font-family: "Sana Sans", sans-serif;
+  font-size: 1.2rem;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+  font-variation-settings: "wght" 400, "opsz" 14, "ital" 0;
+  opacity: 0.6;
+}
 
 .testimonial-avatar img {
   width: 100%;
