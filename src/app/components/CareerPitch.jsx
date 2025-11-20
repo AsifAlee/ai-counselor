@@ -51,7 +51,7 @@ export default function CareerPitch() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.15, duration: 0.7 }}
-              className="mt-5 text-gray-600 dark:text-gray-300 max-w-lg mx-auto font-sana"
+              className="mt-5 dark:text-gray-300 max-w-lg mx-auto font-sana"
             >
               No more generic advice. No more endless searching for the right
               career path. Drop in your goals and background, and let your AI

@@ -31,13 +31,13 @@ export default function Impact() {
       <div className="max-w-7xl grid grid-cols-2 sm:grid-col-1 mx-auto px-1">
         {/* Heading */}
         <div className="">
-          <div className="flex flex-col w-[70%] justify-center items-center mx-auto">
+          <div className="flex flex-col w-[70%] justify-center items-center">
             <motion.h2
               initial={{ opacity: 0, y: 8 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 w-full text-left"
+              className="text-5xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 w-full text-left"
             >
               Pathvius Impact
             </motion.h2>
@@ -47,7 +47,7 @@ export default function Impact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="mt-4 max-w-xl   dark:text-gray-300 text-sm"
+              className="mt-4 max-w-xl   dark:text-gray-300 text-lg"
             >
               Empowering students and institutions with data-backed,
               personalized career guidance.
@@ -58,7 +58,7 @@ export default function Impact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="mt-4 max-w-xl   dark:text-gray-300 text-sm"
+              className="mt-4 max-w-xl   dark:text-gray-300 text-lg"
             >
               Amira is validated by independent research and trusted by
               districts for delivering measurable impact.
@@ -69,7 +69,7 @@ export default function Impact() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="mt-4 max-w-xl text-sm  dark:text-gray-300"
+              className="mt-4 max-w-xl  dark:text-gray-300 text-lg"
             >
               From urban centers to rural communities, Amira helps millions of
               students worldwide become proficient readers. Students learning
@@ -80,7 +80,7 @@ export default function Impact() {
         </div>
 
         {/* Stats Grid */}
-        <div className="flex flex-col  gap-1 " style={{ paddingRight: "4rem" }}>
+        <div className="flex flex-col  gap-14" style={{ paddingRight: "4rem" }}>
           {stats.map((s, i) => (
             <motion.div
               key={i}
@@ -93,7 +93,7 @@ export default function Impact() {
               <div className="flex flex-col gap-2">
                 <div className="grid grid-cols-2 w-full h-full">
                   <div className="flex flex-col ">
-                    <p className="text-left text-lg font-semibold text-gray-900 dark:text-gray-100">
+                    <p className="text-left text-2xl font-semibold text-gray-900 dark:text-gray-100">
                       {s.label}
                     </p>
                     <p className="text-sm dark:text-gray-300 leading-relaxed">

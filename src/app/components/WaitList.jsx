@@ -54,7 +54,7 @@ export default function Waitlist() {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.4 }}
-            className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl dark:shadow-gray-700/40 p-8 grid grid-cols-1 gap-6"
+            className="bg-white dark:bg-gray-800 rounded-2xl  dark:shadow-gray-700/40 p-8 grid grid-cols-1 gap-6"
           >
             {/* ROW 1 — EMAIL ONLY */}
             <div>

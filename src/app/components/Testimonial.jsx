@@ -59,7 +59,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-20 bg-white dark:bg-gray-900 transition-colors testimonials"
+      className="py-13 bg-white dark:bg-gray-900 transition-colors testimonials"
     >
       <div className="max-w-4xl mx-auto px-6 text-center">
         {/* Carousel Wrapper */}

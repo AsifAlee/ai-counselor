@@ -22,7 +22,7 @@ export default function Marquee() {
 
   return (
     <div className="marquuee flex flex-col items-center justify-center  px-4">
-      <p className="text-center mt-3">
+      <p className="text-center mt-8">
         Partnering with leading visionaries to shape the future of education.
       </p>
       <div className="w-full overflow-hidden py-10 dark:bg-gray-900 relative">

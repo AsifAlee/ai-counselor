@@ -17,7 +17,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="text-4xl md:text-5xl font-bold leading-tight text-gray-900 dark:text-gray-100 font-sana-serif"
+            className="text-4xl md:text-5xl font-bold leading-tight  dark:text-gray-100 font-sana-serif"
           >
             Shape the Future of Career Coaching
           </motion.h1>
@@ -27,7 +27,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mt-6 text-gray-700 dark:text-gray-300 max-w-lg text-lg font-sana-serif"
+            className="mt-6  dark:text-gray-300 max-w-lg text-lg font-sana-serif"
           >
             Are you looking for a new role, considering a career change, or
             wanting to know yourself better?
@@ -37,7 +37,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="mt-6 text-gray-700 dark:text-gray-300 max-w-lg text-lg font-sana-serif"
+            className="mt-6  dark:text-gray-300 max-w-lg text-lg font-sana-serif"
           >
             Discover your potential with Phai, an experimental AI career coach
             from Sapia.ai. We’re seeking your valuable feedback to refine and
