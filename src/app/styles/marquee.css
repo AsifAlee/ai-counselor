@@ -1,6 +1,7 @@
-.marquee {
+.marquuee {
+  background-color: #f5f0ec;
 }
-.marquee img {
+.marquuee img {
   width: auto;
-  height: 7.06rem;
+  height: 6rem;
 }

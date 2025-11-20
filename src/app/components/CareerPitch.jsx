@@ -1,15 +1,24 @@
 "use client";
 
 import { motion } from "framer-motion";
+import {
+  FileUser,
+  Flag,
+  ChartNoAxesGantt,
+  SquaresUnite,
+  ChartNoAxesCombined,
+} from "lucide-react";
+<FileUser />;
+
 import "../styles/career-pitch.css";
 
 export default function CareerPitch() {
   const steps = [
-    "Define your career goals",
-    "Upload your background and experiences",
-    "Auto-generate a tailored career plan",
-    "Get guidance from your AI Avatar",
-    "Track progress in real time",
+    { icon: FileUser, text: "Define your goals" },
+    { icon: Flag, text: "Upload background" },
+    { icon: ChartNoAxesGantt, text: "Career plan" },
+    { icon: SquaresUnite, text: "AI guidance" },
+    { icon: ChartNoAxesCombined, text: "Track progress" },
   ];
 
   return (
@@ -21,7 +30,7 @@ export default function CareerPitch() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight italic"
+              className="text-3xl md:text-4xl font-extrabold text-gray-900 dark:text-gray-100 leading-tight italic font-sana-serif"
             >
               AI Career Counseling —{" "}
               <span className="text-blue-600 dark:text-blue-400">
@@ -33,7 +42,7 @@ export default function CareerPitch() {
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7 }}
-              className="mt-4 text-xl text-gray-700 dark:text-gray-300 font-medium"
+              className="mt-4 text-xl text-gray-700 dark:text-gray-300 font-medium font-sana"
             >
               You’re finally free.
             </motion.h3>
@@ -42,7 +51,7 @@ export default function CareerPitch() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.15, duration: 0.7 }}
-              className="mt-5 text-gray-600 dark:text-gray-300 max-w-lg mx-auto"
+              className="mt-5 text-gray-600 dark:text-gray-300 max-w-lg mx-auto font-sana"
             >
               No more generic advice. No more endless searching for the right
               career path. Drop in your goals and background, and let your AI
@@ -57,13 +66,7 @@ export default function CareerPitch() {
 
           {/* Steps */}
           <div className="grid grid-cols-5 text-center relative">
-            {[
-              { icon: "🎯", text: "Define your goals" },
-              { icon: "📄", text: "Upload background" },
-              { icon: "🧭", text: "Career plan" },
-              { icon: "🤖", text: "AI guidance" },
-              { icon: "📊", text: "Track progress" },
-            ].map((step, i) => (
+            {steps.map((step, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 15 }}
@@ -71,27 +74,14 @@ export default function CareerPitch() {
                 transition={{ delay: i * 0.12 }}
                 className="flex flex-col items-center"
               >
-                {/* BIGGER bubble */}
                 <div
-                  className="
-          w-16 h-16 
-          flex items-center justify-center 
-          rounded-full 
-          text-3xl
-          
-          text-gray-900 dark:text-gray-100 
-          shadow-md 
-          relative z-10
-        "
-                  style={{
-                    backgroundColor: "#cdfe00",
-                  }}
+                  className="w-16 h-16 flex items-center justify-center rounded-full shadow-md text-gray-900 dark:text-gray-100"
+                  style={{ backgroundColor: "#cdfe00" }}
                 >
-                  {step.icon}
+                  <step.icon size={28} />
                 </div>
 
-                {/* More spacing */}
-                <p className="mt-4 text-base font-semibold text-gray-800 dark:text-gray-200 max-w-[150px] leading-snug">
+                <p className="mt-4 text-base font-semibold text-gray-800 dark:text-gray-200 max-w-[150px]">
                   {step.text}
                 </p>
               </motion.div>
