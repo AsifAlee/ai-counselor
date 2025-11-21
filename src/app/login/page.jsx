@@ -1,94 +1,12 @@
-// "use client";
-
-// import { motion } from "framer-motion";
-// import { useState } from "react";
-
-// export default function Signup() {
-//   const [form, setForm] = useState({ name: "", email: "", password: "" });
-
-//   return (
-//     <section className="h-screen grid grid-cols-2  overflow-hidden">
-//       {/* LEFT COLUMN — FORM */}
-//       <div className="flex items-center justify-center px-8 py-12 bg-white dark:bg-gray-900 border">
-//         <motion.div
-//           initial={{ opacity: 0, y: 10 }}
-//           animate={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.6 }}
-//           className="w-full max-w-sm"
-//         >
-//           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-//             Create an Account
-//           </h2>
-
-//           {/* NAME */}
-//           <div className="mb-4">
-//             <label className="block text-sm mb-1 text-gray-700 dark:text-gray-300">
-//               Full Name
-//             </label>
-//             <input
-//               type="text"
-//               className="w-full px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100"
-//             />
-//           </div>
-
-//           {/* EMAIL */}
-//           <div className="mb-4">
-//             <label className="block text-sm mb-1 text-gray-700 dark:text-gray-300">
-//               Email Address
-//             </label>
-//             <input
-//               type="email"
-//               className="w-full px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100"
-//             />
-//           </div>
-
-//           {/* PASSWORD */}
-//           <div className="mb-6">
-//             <label className="block text-sm mb-1 text-gray-700 dark:text-gray-300">
-//               Password
-//             </label>
-//             <input
-//               type="password"
-//               className="w-full px-4 py-2 rounded-lg bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 text-gray-900 dark:text-gray-100"
-//             />
-//           </div>
-
-//           {/* BUTTON */}
-//           <button className="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold">
-//             Sign Up
-//           </button>
-
-//           <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-//             Already have an account?{" "}
-//             <a
-//               href="/login"
-//               className="text-blue-600 dark:text-blue-400 underline"
-//             >
-//               Log In
-//             </a>
-//           </p>
-//         </motion.div>
-//       </div>
-
-//       {/* RIGHT COLUMN — IMAGE */}
-//       <div className="hidden lg:block overflow-hidden h-full py-20 px-20 border">
-//         <img
-//           src="/loginpage.jpg"
-//           alt="Signup Illustration"
-//           className="w-full h-full object-cover"
-//         />
-//       </div>
-//     </section>
-//   );
-// }
-
 "use client";
 
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function Login() {
   const [form, setForm] = useState({ name: "", email: "", password: "" });
+  const router = useRouter();
 
   return (
     <section className="h-screen grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
@@ -159,17 +77,20 @@ export default function Login() {
           </div>
 
           {/* BUTTON */}
-          <button className="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold">
-            Sign Up
+          <button
+            onClick={() => router.push("/dashboard")}
+            className="w-full py-3 rounded-lg bg-black hover:bg-blue-700 text-white font-semibold"
+          >
+            Login
           </button>
 
           <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
-            Already have an account?{" "}
+            Dont have an account?{" "}
             <a
-              href="/login"
-              className="text-blue-600 dark:text-blue-400 underline"
+              href="/signup"
+              className="text-black-600 dark:text-blue-400 underline"
             >
-              Log In
+              Signup
             </a>
           </p>
 
@@ -185,7 +106,7 @@ export default function Login() {
             <button className="w-full py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg flex items-center justify-center gap-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
               <img src="/icons/google.svg" alt="Google" className="w-5 h-5" />
               <span className="text-gray-700 dark:text-gray-200">
-                Sign up with Google
+                Sign in with Google
               </span>
             </button>
 
@@ -193,7 +114,7 @@ export default function Login() {
             <button className="w-full py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg flex items-center justify-center gap-3 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
               <img src="/icons/apple.svg" alt="Apple" className="w-5 h-5" />
               <span className="text-gray-700 dark:text-gray-200">
-                Sign up with Apple
+                Sign in with Apple
               </span>
             </button>
 
@@ -205,7 +126,7 @@ export default function Login() {
                 className="w-5 h-5"
               />
               <span className="text-gray-700 dark:text-gray-200">
-                Sign up with Microsoft
+                Sign in with Microsoft
               </span>
             </button>
           </div>

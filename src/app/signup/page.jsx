@@ -159,7 +159,7 @@ export default function Signup() {
           </div>
 
           {/* BUTTON */}
-          <button className="w-full py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-semibold">
+          <button className="w-full py-3 rounded-lg bg-black hover:hover:bg-blue-700 text-white font-semibold">
             Sign Up
           </button>
 
