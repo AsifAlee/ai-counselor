@@ -5,7 +5,7 @@ import { Home, MessageSquare, FileText, Settings, Plus } from "lucide-react";
 
 export default function Sidebar() {
   return (
-    <aside className="w-16 md:w-20 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-800 flex flex-col items-center py-6 gap-6">
+    <aside className="sidebar w-16 md:w-20 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-800 flex flex-col items-center py-6 gap-6">
       <div className="w-10 h-10 rounded-xl bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
         {/* top circular icon */}
         <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-pink-500" />
