@@ -66,17 +66,6 @@ export default function ChatInput({ imageSrc }) {
               </div>
             </div>
           </div>
-
-          {/* right: mock preview */}
-          <div className="w-[320px] hidden md:block">
-            <div className="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700">
-              <img
-                src={imageSrc}
-                alt="preview"
-                className="w-full h-64 object-cover"
-              />
-            </div>
-          </div>
         </div>
       </div>
     </div>

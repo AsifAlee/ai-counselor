@@ -41,7 +41,7 @@ export default function Sidebar() {
       {/* user avatar */}
       <div className="w-10 h-10 rounded-full overflow-hidden border border-gray-200 dark:border-gray-700">
         <img
-          src="/mnt/data/B2CE5AAB-0A21-4C0D-B88C-B4A5126F9FB4.png"
+          src="/profile/p1.jpg"
           alt="avatar"
           className="w-full h-full object-cover"
         />

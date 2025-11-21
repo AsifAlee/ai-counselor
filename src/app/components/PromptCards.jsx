@@ -23,8 +23,8 @@ export default function PromptCards() {
             <motion.button
               key={i}
               whileHover={{ y: -4 }}
-              className="prompt-cards text-left pt-2 pb-6 px-3 rounded-xl dark:bg-gray-800 
-              border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition"
+              className="prompt-cards text-left pt-2 pb-3 px-3 rounded-xl dark:bg-gray-800 
+              border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition flex gap-5 flex-col items-start"
             >
               <div className="text-xs text-gray-700 dark:text-gray-300 mb-3">
                 {p}
