@@ -161,7 +161,6 @@ export default function Signup() {
   };
 
   const handleSignup = async () => {
-    console.log("Submitting signup form:", process.env.BASE_URL);
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_BASE_URL}api/v1/auth/signup`,
       {

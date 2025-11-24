@@ -40,7 +40,7 @@ export default function Hero() {
             className="mt-6  dark:text-gray-300 max-w-lg text-lg font-sana-serif"
           >
             Discover your potential with Phai, an experimental AI career coach
-            from Sapia.ai. We’re seeking your valuable feedback to refine and
+            from Pathlight. We’re seeking your valuable feedback to refine and
             improve our service.
           </motion.p>
 

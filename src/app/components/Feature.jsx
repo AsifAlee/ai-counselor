@@ -40,7 +40,7 @@ export default function Features() {
             Features & Benefits
           </h2>
           <p className="text-center max-w-2xl mx-auto text-gray-600 dark:text-gray-300 text-lg">
-            Discover how Pathvius elevates career planning using next-gen AI
+            Discover how Pathlight elevates career planning using next-gen AI
             intelligence.
           </p>
         </FadeInWhenVisible>

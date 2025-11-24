@@ -31,7 +31,7 @@ export default function Navbar() {
         </h1> */}
         <img
           src="./logo.svg"
-          alt="Pathvius logo"
+          alt="Pathlight logo"
           className=" absolute w-36 cursor-pointer dark:invert-[0.9]"
           onClick={() => handleScroll("home")}
         />

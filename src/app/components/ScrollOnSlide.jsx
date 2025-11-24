@@ -7,7 +7,7 @@ export default function ScrollOnSlide() {
   const steps = [
     {
       title: "Adapts to your goals",
-      desc: "Pathvius personalizes suggestions based on your ambitions.",
+      desc: "Pathlight personalizes suggestions based on your ambitions.",
       img: "/slide-01.jpg",
     },
     {

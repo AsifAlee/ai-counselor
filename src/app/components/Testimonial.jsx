@@ -9,7 +9,7 @@ export default function Testimonials() {
   const testimonials = [
     {
       quote:
-        "Pathvius transformed how we think about career counselling – the AI avatar made our students feel one-on-one backed by data. The progress and confidence we saw was remarkable.",
+        "Pathlight transformed how we think about career counselling – the AI avatar made our students feel one-on-one backed by data. The progress and confidence we saw was remarkable.",
       name: "Aisha Malik",
       title: "Student, Rawalpindi",
       image: "./profile/p1.jpg",

@@ -26,7 +26,7 @@ export default function ChatInput({ imageSrc }) {
               className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-full px-3 py-1 text-sm outline-none"
             >
               <option>All Web</option>
-              <option>Pathvius</option>
+              <option>Pathlight</option>
               <option>My Files</option>
             </select>
           </div>

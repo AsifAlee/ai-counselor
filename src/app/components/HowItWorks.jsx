@@ -10,7 +10,7 @@ export default function HowItWorks() {
       title: "Upload your profile",
       desc: "Provide your details or upload your resume to get started instantly.",
       details:
-        "Upload your resume or fill in details manually. Pathvius extracts skills, background, interests, and experience to build your profile quickly.",
+        "Upload your resume or fill in details manually. Pathlight extracts skills, background, interests, and experience to build your profile quickly.",
       icon: "📤",
     },
     {
@@ -31,7 +31,7 @@ export default function HowItWorks() {
       title: "Interactive mentoring",
       desc: "Chat with the AI mentor for guidance, resources, and interview prep.",
       details:
-        "Refine your roadmap, ask questions, practice interviews, and get personalized recommendations from your Pathvius AI mentor.",
+        "Refine your roadmap, ask questions, practice interviews, and get personalized recommendations from your Pathlight AI mentor.",
       icon: "💬",
     },
   ];
@@ -145,7 +145,7 @@ export default function HowItWorks() {
       <div className="max-w-7xl mx-auto px-6">
         {/* TITLE */}
         <h2 className="text-center text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-12">
-          How Pathvius Works
+          How Pathlight Works
         </h2>
 
         <FadeInWhenVisible>

@@ -16,7 +16,7 @@ export default function WhatItOffers() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 text-center mb-12 w-750 mx-auto w-[70%]"
         >
-          Pathvius offers personalised career insights and guidance to help you
+          Pathlight offers personalised career insights and guidance to help you
           explore your professional journey
         </motion.h2>
 
@@ -32,7 +32,7 @@ export default function WhatItOffers() {
           >
             <img
               src="/sample-img-2.jpeg" // update this path
-              alt="What Pathvius Offers"
+              alt="What Pathlight Offers"
               className="w-full max-w-md rounded-2xl shadow-lg dark:shadow-black/40 object-cover"
             />
           </motion.div>

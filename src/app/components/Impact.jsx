@@ -12,7 +12,7 @@ export default function Impact() {
     {
       value: "48M+",
       label: "Institutions Onboarded",
-      desc: "Educational institutes using Pathvius for AI-driven counseling.",
+      desc: "Educational institutes using Pathlight for AI-driven counseling.",
     },
     {
       value: "92%",
@@ -39,7 +39,7 @@ export default function Impact() {
               transition={{ duration: 0.6 }}
               className="text-5xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 w-full text-left"
             >
-              Pathvius Impact
+              Pathlight Impact
             </motion.h2>
 
             <motion.p
