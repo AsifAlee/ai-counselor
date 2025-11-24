@@ -160,6 +160,25 @@ export default function Signup() {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleSignup = async () => {
+    console.log("Submitting signup form:", process.env.BASE_URL);
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}api/v1/auth/signup`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          password: form.password,
+        }),
+      }
+    );
+
+    const data = await res.json();
+    console.log(data);
+  };
+
   return (
     <section className="h-screen grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
       {/* LEFT COLUMN — FORM */}
@@ -260,7 +279,10 @@ export default function Signup() {
           </div>
 
           {/* SUBMIT BUTTON (Always student) */}
-          <button className="w-full py-3 rounded-lg bg-black hover:bg-gray-800 text-white font-semibold">
+          <button
+            className="w-full py-3 rounded-lg bg-black hover:bg-gray-800 text-white font-semibold"
+            onClick={handleSignup}
+          >
             Sign Up as Student
           </button>
 

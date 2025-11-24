@@ -31,7 +31,7 @@ export default function WhatItOffers() {
             className="flex justify-center"
           >
             <img
-              src="/sample-img.jpeg" // update this path
+              src="/sample-img-2.jpeg" // update this path
               alt="What Pathvius Offers"
               className="w-full max-w-md rounded-2xl shadow-lg dark:shadow-black/40 object-cover"
             />
