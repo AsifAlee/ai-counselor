@@ -18,8 +18,10 @@ const AppProvider = ({ children }) => {
   const fetchUser = async () => {
     try {
       const { data } = await axios.get(
-        `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/auth/showMe`
+        `${process.env.NEXT_PUBLIC_BASE_URL}api/v1/user/showMe`,
+        { withCredentials: true }
       );
+
       saveUser(data.user);
     } catch (error) {
       removeUser();

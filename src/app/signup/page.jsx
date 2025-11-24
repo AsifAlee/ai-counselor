@@ -160,9 +160,27 @@ export default function Signup() {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
+  // const handleSignup = async () => {
+  //   const res = await fetch(
+  //     `${process.env.NEXT_PUBLIC_BASE_URL}api/v1/auth/signup`,
+  //     {
+  //       method: "POST",
+  //       headers: { "Content-Type": "application/json" },
+  //       body: JSON.stringify({
+  //         name: form.name,
+  //         email: form.email,
+  //         password: form.password,
+  //       }),
+  //     }
+  //   );
+
+  //   const data = await res.json();
+  //   console.log(data);
+  // };
+
   const handleSignup = async () => {
     const res = await fetch(
-      `${process.env.NEXT_PUBLIC_BASE_URL}api/v1/auth/signup`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}api/v1/auth/signup}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

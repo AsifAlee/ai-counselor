@@ -3,10 +3,40 @@
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import axios from "axios";
 
 export default function Login() {
-  const [form, setForm] = useState({ name: "", email: "", password: "" });
+  const [form, setForm] = useState({ email: "", password: "" });
   const router = useRouter();
+
+  console.log("form", form);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleLogin = async (data) => {
+    // debugger;
+    try {
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_BASE_URL_LOCAL}api/v1/auth/login`,
+        {
+          name: form.name,
+          email: form.email,
+          password: form.password,
+        },
+        { withCredentials: true }
+      );
+
+      console.log(res.data);
+      return res.data;
+    } catch (error) {
+      // Axios gives error.response
+      console.error(error.response?.data || error.message);
+      return error.response?.data;
+    }
+  };
 
   return (
     <section className="h-screen grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
@@ -19,40 +49,35 @@ export default function Login() {
           className="w-full max-w-md"
         >
           <h2 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-10">
-            Create an Account
+            Login into your Account
           </h2>
 
           {/* FULL NAME */}
-          <div className="relative mb-6">
-            <input
-              type="text"
-              id="fullname"
-              className="peer w-full border-b border-gray-400 dark:border-gray-600 bg-transparent py-2 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-blue-600 dark:focus:border-blue-400"
-              placeholder=" "
-            />
-            <label
-              htmlFor="fullname"
-              className="absolute left-0 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 transition-all 
-              peer-focus:top-0 peer-focus:text-xs peer-focus:text-blue-600 dark:peer-focus:text-blue-400 
-              peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base pointer-events-none"
-            >
-              Full Name
-            </label>
-          </div>
 
           {/* EMAIL */}
           <div className="relative mb-6">
             <input
               type="email"
               id="email"
-              className="peer w-full border-b border-gray-400 dark:border-gray-600 bg-transparent py-2 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-blue-600 dark:focus:border-blue-400"
-              placeholder=" "
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder=" " // keep this!
+              className="
+      peer w-full border-b border-gray-400 dark:border-gray-600 bg-transparent py-2 
+      text-gray-900 dark:text-gray-100 focus:outline-none 
+      focus:border-blue-600 dark:focus:border-blue-400
+    "
             />
+
             <label
               htmlFor="email"
-              className="absolute left-0 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 transition-all 
-              peer-focus:top-0 peer-focus:text-xs peer-focus:text-blue-600 dark:peer-focus:text-blue-400 
-              peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base pointer-events-none"
+              className="
+      absolute left-0 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 
+      transition-all pointer-events-none
+      peer-focus:top-0 peer-focus:text-xs peer-focus:text-blue-600 dark:peer-focus:text-blue-400
+      peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:text-xs
+    "
             >
               Email Address
             </label>
@@ -65,12 +90,16 @@ export default function Login() {
               id="password"
               className="peer w-full border-b border-gray-400 dark:border-gray-600 bg-transparent py-2 text-gray-900 dark:text-gray-100 focus:outline-none focus:border-blue-600 dark:focus:border-blue-400"
               placeholder=" "
+              onChange={handleChange}
+              name="password"
             />
             <label
               htmlFor="password"
               className="absolute left-0 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 transition-all 
               peer-focus:top-0 peer-focus:text-xs peer-focus:text-blue-600 dark:peer-focus:text-blue-400 
-              peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base pointer-events-none"
+              peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base pointer-events-none
+                    peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:text-xs
+              "
             >
               Password
             </label>
@@ -78,7 +107,8 @@ export default function Login() {
 
           {/* BUTTON */}
           <button
-            onClick={() => router.push("/dashboard")}
+            // onClick={() => router.push("/dashboard")}
+            onClick={() => handleLogin(form)}
             className="w-full py-3 rounded-lg bg-black hover:bg-blue-700 text-white font-semibold"
           >
             Login
