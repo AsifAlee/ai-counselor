@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Pathvius - AI-Powered Career Counselor",
+  title: "Pathlight - AI-Powered Career Counselor",
   description: "Take a step into your career future with AI-powered guidance.",
 };
 
