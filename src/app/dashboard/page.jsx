@@ -7,8 +7,10 @@ import ChatInput from "@/app/components/ChatInput";
 
 import "../styles/dashboard.css";
 import ProtectedRoute from "../components/ProtectedRoute";
+import { useAuth } from "../context/authContext";
 
 export default function DashboardPage() {
+  const { user } = useAuth();
   return (
     <ProtectedRoute>
       <div className="dashboard min-h-screen bg-gray-100 dark:bg-gray-900 flex">
@@ -23,7 +25,7 @@ export default function DashboardPage() {
               <h1 className="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900 dark:text-gray-100">
                 Hi there,{" "}
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-500">
-                  John
+                  {user?.name}
                 </span>
               </h1>
               <p className=" mt-3 bg-clip-text text-4xl text-transparent bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-500">
