@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@/context/ThemeContext";
+import { ThemeProvider } from "@/app/context/ThemeContext";
 
 import DemoSection from "./components/DemoSection";
 import Features from "./components/Feature";

@@ -1,4 +1,5 @@
 "use client";
+import api from "@/app/lib/api";
 import axios from "axios";
 import React, { useContext, useState, useEffect } from "react";
 
@@ -6,6 +7,9 @@ const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);
+  let baseURL;
+  // baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+  baseURL = process.env.NEXT_PUBLIC_BASE_URL_LOCAL;
   const [user, setUser] = useState(null);
   const saveUser = (user) => {
     setUser(user);
@@ -17,10 +21,9 @@ const AppProvider = ({ children }) => {
 
   const fetchUser = async () => {
     try {
-      const { data } = await axios.get(
-        `${process.env.NEXT_PUBLIC_BASE_URL}api/v1/user/showMe`,
-        { withCredentials: true }
-      );
+      const { data } = await api.get(`${baseURL}api/v1/user/showMe`, {
+        withCredentials: true,
+      });
 
       saveUser(data.user);
     } catch (error) {
@@ -49,6 +52,7 @@ const AppProvider = ({ children }) => {
         saveUser,
         user,
         logoutUser,
+        baseURL,
       }}
     >
       {children}

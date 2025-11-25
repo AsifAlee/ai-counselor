@@ -1,7 +1,7 @@
 "use client";
 import { Sun, Moon } from "lucide-react";
 import { motion } from "framer-motion";
-import { useTheme } from "@/context/ThemeContext";
+import { useTheme } from "@/app/context/ThemeContext";
 
 export default function DarkModeSwitch({ className = "" }) {
   const { theme, toggleTheme } = useTheme();

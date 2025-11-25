@@ -4,9 +4,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import DarkModeSwitch from "./DarkModeSwitch";
+import { useAuth } from "../context/authContext";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { user } = useAuth();
+  const router = useRouter();
 
   const handleScroll = (id) => {
     const el = document.getElementById(id);
@@ -107,18 +111,25 @@ export default function Navbar() {
         {/* Right Section */}
         <div className="hidden md:flex items-center gap-4">
           {/* Book Intro Button */}
-          <a href="/signup">
+          <a>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               className="bg-blue-600 text-white text-sm px-5 py-2 rounded-full hover:bg-blue-700 transition dark:bg-blue-500 dark:hover:bg-blue-600"
+              onClick={() => {
+                if (user) {
+                  router.push("/dashboard");
+                } else {
+                  router.push("/login");
+                }
+              }}
             >
               Book an intro
             </motion.button>
           </a>
 
           {/* Dark Mode Toggle */}
-          <DarkModeSwitch />
+          {/* <DarkModeSwitch /> */}
         </div>
 
         {/* Mobile Hamburger Icon */}

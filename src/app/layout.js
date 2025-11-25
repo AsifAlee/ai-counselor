@@ -1,7 +1,7 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/context/ThemeContext";
-import { AppProvider } from "@/context/AppContext";
+
+import { AuthProvider } from "@/app/context/authContext";
+import { ThemeProvider } from "./context/ThemeContext";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -22,14 +22,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <ThemeProvider>
-        <AppProvider>
-          <body
-
-          // className={`${geistSans.variable} ${geistMono.variable}`}
-          >
-            {children}
-          </body>
-        </AppProvider>
+        <AuthProvider>
+          <body>{children}</body>
+        </AuthProvider>
       </ThemeProvider>
     </html>
   );

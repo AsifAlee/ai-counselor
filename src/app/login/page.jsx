@@ -3,40 +3,53 @@
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import axios from "axios";
+
+import { useAuth } from "../context/authContext";
+import { login as loginService } from "../lib/authService";
 
 export default function Login() {
+  const { baseURL, login } = useAuth();
+
   const [form, setForm] = useState({ email: "", password: "" });
   const router = useRouter();
-
-  console.log("form", form);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleLogin = async (data) => {
-    // debugger;
+  const handleLogin = async ({ email, password }) => {
     try {
-      const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_BASE_URL_LOCAL}api/v1/auth/login`,
-        {
-          name: form.name,
-          email: form.email,
-          password: form.password,
-        },
-        { withCredentials: true }
-      );
+      const data = await loginService({ email, password });
 
-      console.log(res.data);
-      return res.data;
-    } catch (error) {
-      // Axios gives error.response
-      console.error(error.response?.data || error.message);
-      return error.response?.data;
+      router.push("/dashboard");
+    } catch (err) {
+      debugger;
+      console.log(err);
     }
   };
+  // const handleLogin = async (data) => {
+  //   // debugger;
+  //   try {
+  //     const res = await api.post(
+  //       `${baseURL}api/v1/auth/login`,
+  //       {
+  //         name: form.name,
+  //         email: form.email,
+  //         password: form.password,
+  //       },
+  //       { withCredentials: true }
+  //     );
+
+  //     console.log(res.data);
+  //     localStorage.setItem("token", res.data.token);
+  //     return res.data;
+  //   } catch (error) {
+  //     // Axios gives error.response
+  //     console.error(error.response?.data || error.message);
+  //     return error.response?.data;
+  //   }
+  // };
 
   return (
     <section className="h-screen grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
