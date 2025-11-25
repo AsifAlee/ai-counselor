@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 import { fetchUser, logout as logoutService } from "../lib/authService";
+import toast from "react-hot-toast";
 
 const AuthContext = createContext();
 
@@ -40,6 +41,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     logoutService();
     setUser(null);
+    toast.success("Logged out  successfully!");
   };
 
   return (

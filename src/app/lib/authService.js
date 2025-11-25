@@ -2,7 +2,7 @@ import api from "./api";
 
 // Save & remove token helper
 export const saveToken = (token) => {
-  debugger;
+  //   debugger;
   if (typeof window !== "undefined") {
     localStorage.setItem("token", token);
   }
@@ -32,7 +32,7 @@ export const login = async (payload) => {
   // Save token from backend
   saveToken(data.token);
 
-  return data.user;
+  return data;
 };
 
 // LOGOUT

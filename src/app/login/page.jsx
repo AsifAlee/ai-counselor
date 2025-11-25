@@ -6,9 +6,12 @@ import { useState } from "react";
 
 import { useAuth } from "../context/authContext";
 import { login as loginService } from "../lib/authService";
+import toast from "react-hot-toast";
+import LoadingButton from "../components/LoadingButton";
 
 export default function Login() {
   const { baseURL, login } = useAuth();
+  const [isLoading, setIsLoading] = useState(false);
 
   const [form, setForm] = useState({ email: "", password: "" });
   const router = useRouter();
@@ -18,38 +21,22 @@ export default function Login() {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleLogin = async ({ email, password }) => {
+  const handleLogin = async () => {
+    debugger;
+    const { email, password } = form;
     try {
+      setIsLoading(true);
       const data = await loginService({ email, password });
-
+      login(data.user, data.token);
+      toast.success("Logged in successfully!");
       router.push("/dashboard");
     } catch (err) {
-      debugger;
-      console.log(err);
+      toast.error(err?.response?.data?.message || "Login failed");
+      console.log("login error:", err);
+    } finally {
+      setIsLoading(false);
     }
   };
-  // const handleLogin = async (data) => {
-  //   // debugger;
-  //   try {
-  //     const res = await api.post(
-  //       `${baseURL}api/v1/auth/login`,
-  //       {
-  //         name: form.name,
-  //         email: form.email,
-  //         password: form.password,
-  //       },
-  //       { withCredentials: true }
-  //     );
-
-  //     console.log(res.data);
-  //     localStorage.setItem("token", res.data.token);
-  //     return res.data;
-  //   } catch (error) {
-  //     // Axios gives error.response
-  //     console.error(error.response?.data || error.message);
-  //     return error.response?.data;
-  //   }
-  // };
 
   return (
     <section className="h-screen grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
@@ -118,14 +105,9 @@ export default function Login() {
             </label>
           </div>
 
-          {/* BUTTON */}
-          <button
-            // onClick={() => router.push("/dashboard")}
-            onClick={() => handleLogin(form)}
-            className="w-full py-3 rounded-lg bg-black hover:bg-blue-700 text-white font-semibold"
-          >
+          <LoadingButton handleClick={handleLogin} isLoading={isLoading}>
             Login
-          </button>
+          </LoadingButton>
 
           <p className="mt-4 text-sm text-gray-600 dark:text-gray-400">
             Dont have an account?{" "}

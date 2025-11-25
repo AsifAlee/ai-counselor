@@ -2,16 +2,8 @@ import "./globals.css";
 
 import { AuthProvider } from "@/app/context/authContext";
 import { ThemeProvider } from "./context/ThemeContext";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import { Toaster } from "react-hot-toast";
+import ToastManager from "./components/ToastManager";
 
 export const metadata = {
   title: "Pathlight - AI-Powered Career Counselor",
@@ -23,7 +15,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <ThemeProvider>
         <AuthProvider>
-          <body>{children}</body>
+          <body>
+            {children}
+            <ToastManager />
+          </body>
         </AuthProvider>
       </ThemeProvider>
     </html>

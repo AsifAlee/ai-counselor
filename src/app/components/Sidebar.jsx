@@ -2,8 +2,10 @@
 "use client";
 
 import { Home, MessageSquare, FileText, Settings, Plus } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Sidebar() {
+  const router = useRouter();
   return (
     <aside className="sidebar w-16 md:w-20 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-800 flex flex-col items-center py-6 gap-6">
       <div className="w-10 h-10 rounded-xl bg-gray-100 dark:bg-gray-900 flex items-center justify-center">
@@ -44,6 +46,7 @@ export default function Sidebar() {
           src="/profile/p1.jpg"
           alt="avatar"
           className="w-full h-full object-cover"
+          onClick={() => router.push("/dashboard/profile")}
         />
       </div>
     </aside>
