@@ -26,17 +26,24 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 w-full bg-white dark:bg-gray-900 dark:text-gray-200 z-50 border-b border-gray-200 dark:border-gray-700 transition-colors">
       <nav className=" relative max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
-        {/* Logo */}
-        {/* <h1
-          className="text-2xl font-bold text-blue-600 dark:text-blue-400 cursor-pointer"
-          onClick={() => handleScroll("home")}
-        >
-          AI Counselor
-        </h1> */}
-        <img
+        {/* <img
           src="./logo.svg"
           alt="Pathlight logo"
-          className=" absolute w-36 cursor-pointer dark:invert-[0.9]"
+          className="absolute w-36 cursor-pointer dark:invert-[0.9]"
+          onClick={() => handleScroll("home")}
+        /> */}
+        <img
+          src="/logo.svg"
+          alt="Pathlight logo"
+          className="
+    absolute w-36 cursor-pointer dark:invert-[0.9]
+
+
+    right-4 top-[-3.5rem]
+
+
+    md:left-6 md:right-auto top-[-3.1rem] w-36 
+  "
           onClick={() => handleScroll("home")}
         />
 
