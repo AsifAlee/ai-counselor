@@ -48,7 +48,7 @@ export default function ChatPage() {
             <a href="/" className="text-gray-600 dark:text-gray-300">
               ← Back
             </a>
-            <DarkModeSwitch />
+            {/* <DarkModeSwitch /> */}
           </div>
         </header>
 
