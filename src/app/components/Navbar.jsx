@@ -42,7 +42,7 @@ export default function Navbar() {
     right-4 top-[-3.5rem]
 
 
-    md:left-6 md:right-auto top-[-3.1rem] w-36 
+    md:left-6 md:right-auto md:top-[-3.1rem] 
   "
           onClick={() => handleScroll("home")}
         />
