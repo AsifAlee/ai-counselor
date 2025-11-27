@@ -18,27 +18,27 @@ import WhatItOffers from "./components/WhatOffers";
 
 export default function Home() {
   return (
-    <ThemeProvider>
-      <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors">
-        <Navbar />
-        <main className="">
-          <Hero />
-          {/* <ScrollOnSlide /> */}
-          {/* <HowItWorks /> */}
-          <WhatItOffers />
-          <Features />
-          {/* <FeaturesSynced /> */}
-          {/* <DemoSection /> */}
-          <Testimonials />
-          <CareerPitch />
+    // <ThemeProvider>
+    <div className="min-h-screen bg-white  transition-colors">
+      <Navbar />
+      <main className="">
+        <Hero />
+        {/* <ScrollOnSlide /> */}
+        {/* <HowItWorks /> */}
+        <WhatItOffers />
+        <Features />
+        {/* <FeaturesSynced /> */}
+        {/* <DemoSection /> */}
+        <Testimonials />
+        <CareerPitch />
 
-          <Impact />
-          <Multilingual />
-          <Marquee />
-          <Waitlist />
-        </main>
-        <Footer />
-      </div>
-    </ThemeProvider>
+        <Impact />
+        <Multilingual />
+        <Marquee />
+        <Waitlist />
+      </main>
+      <Footer />
+    </div>
+    // </ThemeProvider>
   );
 }
