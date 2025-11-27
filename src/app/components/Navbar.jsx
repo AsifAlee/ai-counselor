@@ -206,9 +206,7 @@ export default function Navbar() {
               </li>
 
               {/* Dark Mode Switch in Mobile Menu */}
-              <li className="pt-2">
-                <DarkModeSwitch />
-              </li>
+              <li className="pt-2">{/* <DarkModeSwitch /> */}</li>
             </ul>
           </motion.div>
         )}

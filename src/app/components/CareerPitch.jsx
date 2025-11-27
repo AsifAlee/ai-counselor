@@ -11,6 +11,7 @@ import {
 <FileUser />;
 
 import "../styles/career-pitch.css";
+import CareerPitchMobileSlider from "./CareerPitchSlider";
 
 export default function CareerPitch() {
   const steps = [
@@ -62,10 +63,12 @@ export default function CareerPitch() {
         </div>
         <div className="relative max-w-5xl mx-auto mt-14">
           {/* Background line */}
-          <div className=" dotted-border"></div>
+          {/* <div className=" dotted-border"></div> */}
+          <div className="dotted-border md:block hidden md:opacity-100 opacity-0 md:h-auto h-0"></div>
 
           {/* Steps */}
-          <div className="grid grid-cols-5 text-center relative">
+
+          <div className="hidden md:grid grid-cols-5 gap-6 text-center">
             {steps.map((step, i) => (
               <motion.div
                 key={i}
@@ -87,6 +90,7 @@ export default function CareerPitch() {
               </motion.div>
             ))}
           </div>
+          <CareerPitchMobileSlider steps={steps} />
         </div>
       </div>
     </section>
