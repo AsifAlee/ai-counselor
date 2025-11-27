@@ -5,7 +5,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         <div>
           <h3 className="text-lg font-semibold mb-3 text-gray-900 dark:text-gray-100">
-            AI Counselor
+            Pathlight
           </h3>
           <p className="text-sm text-gray-700 dark:text-gray-300">
             Your personal AI-powered career guide helping students choose the
