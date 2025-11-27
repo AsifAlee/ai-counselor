@@ -74,7 +74,7 @@ export default function Navbar() {
             </button>
           </li>
 
-          <li>
+          {/* <li>
             <button
               onClick={() => handleScroll("how")}
               className="relative group hover:text-blue-600 dark:hover:text-blue-400 transition"
@@ -82,7 +82,7 @@ export default function Navbar() {
               How It Works
               <span className="absolute left-0 top-9  w-0 h-[2px] bg-blue-600 dark:bg-blue-400 transition-all duration-300 group-hover:w-full"></span>
             </button>
-          </li>
+          </li> */}
 
           <li>
             <button
@@ -167,14 +167,14 @@ export default function Navbar() {
                 </button>
               </li>
 
-              <li>
+              {/* <li>
                 <button
                   onClick={() => handleScroll("how")}
                   className="hover:text-blue-600 dark:hover:text-blue-400 transition"
                 >
                   How It Works
                 </button>
-              </li>
+              </li> */}
 
               <li>
                 <button
