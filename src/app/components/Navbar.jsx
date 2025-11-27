@@ -205,7 +205,7 @@ export default function Navbar() {
 
               {/* Mobile Start Chat */}
               <li>
-                <a href="/chat">
+                <a href="/login">
                   <button className="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition dark:bg-blue-500 dark:hover:bg-blue-600">
                     Start Chat
                   </button>

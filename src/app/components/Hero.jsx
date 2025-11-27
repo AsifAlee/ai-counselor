@@ -52,7 +52,7 @@ export default function Hero() {
             className="mt-8 flex font-sana-serif "
           >
             <a
-              href="/chat"
+              href="/login"
               className="px-6 py-3 rounded-full text-white font-medium hover:bg-blue-700 transition chat-btn"
             >
               Start Chat
