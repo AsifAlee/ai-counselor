@@ -31,7 +31,7 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="py-24 bg-white dark:bg-gray-900 border-t border-transparent"
+      className=" pt-0 pb-7 bg-white md:py-24 dark:bg-gray-900 border-t border-transparent"
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Header */}

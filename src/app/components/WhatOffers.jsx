@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 import "../styles/what-it-offers.css";
 export default function WhatItOffers() {
   return (
-    <section className="what-it-offers py-20 bg-white dark:bg-gray-900">
+    <section className="what-it-offers py-10 md:py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-6">
         {/* ROW 1 — Heading */}
         <motion.h2
@@ -43,7 +43,7 @@ export default function WhatItOffers() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-4"
+            className="mx-auto m-auto w-[70%] md:w-full"
           >
             <ul className="text-lg list-disc font-sana">
               <li>
@@ -61,11 +61,11 @@ export default function WhatItOffers() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9 }}
-              className="mt-8 flex "
+              className="flex flex-col   mt-8 justify-center items-center md:item-start lg:justify-start md:width-full"
             >
               <a
                 href="/login"
-                className="px-6 py-3 rounded-full text-white font-medium hover:bg-blue-700 transition chat-btn"
+                className="px-6 py-3 w-[63%] md:w-[50%]  rounded-full text-white font-medium hover:bg-blue-700 transition chat-btn"
               >
                 Start Chat
                 <ArrowRight className="inline-block ml-2" />

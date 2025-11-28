@@ -51,10 +51,10 @@ export default function Testimonials() {
     setIndex((i) => (i - 1 + testimonials.length) % testimonials.length);
 
   // Auto-slide every 6 seconds
-  useEffect(() => {
-    const timer = setInterval(() => next(), 6000);
-    return () => clearInterval(timer);
-  }, []);
+  // useEffect(() => {
+  //   const timer = setInterval(() => next(), 6000);
+  //   return () => clearInterval(timer);
+  // }, []);
 
   return (
     <section
@@ -64,7 +64,7 @@ export default function Testimonials() {
       <div className="max-w-4xl mx-auto px-6 text-center">
         {/* Carousel Wrapper */}
         <div className="relative overflow-hidden">
-          <div className="relative h-[540px] sm:h-[540px]">
+          <div className="relative h-[621px] md:h-[540px]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={index}
